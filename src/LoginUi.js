@@ -16,9 +16,13 @@ function LoginUi() {
             console.log(username,password);
             await login({username, password});
             setIsLoggedIn(true);
+           
+            setPassword('');
             
         } catch (error) {
             setError('Incorrect username or password!');
+            setUsername('');
+            setError('');
         }
         setIsLoading(false)
     }
@@ -27,7 +31,7 @@ function LoginUi() {
             <div className="login-container" onSubmit={onSubmit}>
                 {isLoggedIn ? (
                 <>
-                <h1>{username}!</h1>
+                <h1>welcome {username}!</h1>
                 <button onClick={() =>setIsLoggedIn(false)} >LogOut</button>
                 </>):(
                     <form className="form" >
