@@ -26,7 +26,6 @@ function App() {
         </ul>
       </nav>
       <Switch>
-        
         <Route path="/login">
           <LoginUi/>
         </Route>
