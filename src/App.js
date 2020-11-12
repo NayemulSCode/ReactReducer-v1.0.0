@@ -5,6 +5,7 @@ import {
   Link
 } from "react-router-dom";
 import './App.css';
+import Home from "./Home";
 import LoginUi from "./LoginUi";
 
 function App() {
@@ -29,9 +30,9 @@ function App() {
         <Route path="/login">
           <LoginUi/>
         </Route>
-        {/* <Route path="/">
+        <Route path="/">
           <Home />
-        </Route> */}
+        </Route>
       </Switch>
     </div>
   </Router>
